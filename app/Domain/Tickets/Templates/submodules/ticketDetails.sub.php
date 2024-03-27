@@ -65,9 +65,24 @@ $ticketTypes = $tpl->get('ticketTypes');
             </div>
 
         <h4 class="widgettitle title-light"><span
-                    class="fa-solid fa-comments"></span><?php echo $tpl->__('subtitles.discussion'); ?></h4>
+                    class="fa-solid fa-comments"></span>What Suppose to do</h4>
 
         <div class="row-fluid">
+        <form method="post" action="<?=BASE_URL ?>/tickets/showTicket/<?php echo $ticket->id; ?>" class="formModal">
+            <textarea name="wstd" rows="3"></textarea>
+        </form>
+        <h4 class="widgettitle title-light"><span
+                    class="fa-solid fa-comments"></span>What Actually Happeened</h4>
+        <form method="post" action="<?=BASE_URL ?>/tickets/showTicket/<?php echo $ticket->id; ?>" class="formModal">
+            <textarea name="wah" rows="3"></textarea>
+        </form>
+        <h4 class="widgettitle title-light"><span
+                    class="fa-solid fa-comments"></span>What We Learn</h4>
+        <form method="post" action="<?=BASE_URL ?>/tickets/showTicket/<?php echo $ticket->id; ?>" class="formModal">
+            <textarea name="wwl" rows="3"></textarea>
+        </form>
+        <h4 class="widgettitle title-light"><span
+                    class="fa-solid fa-comments"></span><?php echo $tpl->__('subtitles.discussion'); ?></h4>
         <form method="post" action="<?=BASE_URL ?>/tickets/showTicket/<?php echo $ticket->id; ?>" class="formModal">
             <input type="hidden" name="comment" value="1" />
             <?php
